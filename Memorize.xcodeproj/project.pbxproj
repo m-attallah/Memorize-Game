@@ -93,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				96271CC42801027E00CC8743 /* Shared */,
+				96271CC72801029100CC8743 /* Assets.xcassets */,
 				96271CD32801029100CC8743 /* macOS */,
 				96271CDC2801029100CC8743 /* Tests iOS */,
 				96271CE82801029100CC8743 /* Tests macOS */,
@@ -106,8 +107,7 @@
 				96271CC52801027F00CC8743 /* MemorizeApp.swift */,
 				9652FF44280EE0B50058F83B /* Model */,
 				9652FF46280EE1990058F83B /* View */,
-				9652FF45280EE10C0058F83B /* View Model */,
-				96271CC72801029100CC8743 /* Assets.xcassets */,
+				966150D5280F0DE600E5F61C /* View Model */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -157,20 +157,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9652FF45280EE10C0058F83B /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				96DCAF60280DA4F1002A24B2 /* EmojiMemoryGame.swift */,
-			);
-			name = "View Model";
-			sourceTree = "<group>";
-		};
 		9652FF46280EE1990058F83B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				96271CC62801027F00CC8743 /* ContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		966150D5280F0DE600E5F61C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				96DCAF60280DA4F1002A24B2 /* EmojiMemoryGame.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
