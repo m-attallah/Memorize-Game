@@ -7,29 +7,29 @@
 
 import SwiftUI
 
-
-// The ViewModel class
 class EmojiMemoryGame: ObservableObject {
-   
-   static let emojis = ["🚔", "🚜", "🚀", "🚁", "🚑", "🚗", "🚙", "🚌", "🏎", "🚎", "🚒", "🚚", "🛺", "🏍", "🚘", "🛵", "✈️", "🚤", "⛴", "🛸", "🚐", "🛻", "🚕", "🚃", "🚖"]
+    typealias Card = MemoryGame<String>.Card
     
-   static func creatMemoryGame() -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: 4) { pairIndex in
-            emojis[pairIndex]
-        }
+    private static let emojis = ["🚔", "🚜", "🚀", "🚁", "🚑", "🚗", "🚙", "🚌", "🏎", "🚎", "🚒", "🚚", "🛺", "🏍", "🚘", "🛵", "✈️", "🚤", "⛴", "🛸", "🚐", "🛻", "🚕", "🚃", "🚖"]
+    
+    
+   private static func creatMemoryGame() -> MemoryGame<String> {
+       MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
+           emojis[pairIndex]
+       }
     }
     
-    @Published private var model: MemoryGame<String> = creatMemoryGame()
+    @Published private var model = creatMemoryGame()
     
-    var cards: Array<MemoryGame<String>.Card> {
-         model.cards
+    var cards: Array<Card> {
+        model.cards
     }
     
     
     // MARK: - Intent(s)
     
-    func choose(_ card: MemoryGame<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
     }
-    
+
 }
